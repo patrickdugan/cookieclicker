@@ -7683,7 +7683,7 @@ Game.Launch=function()
 				//new automated price and CpS curves
 				//this.baseCps=Math.ceil(((this.n*0.5)*Math.pow(this.n*1,this.n*0.9))*10)/10;
 				//this.baseCps=Math.ceil((Math.pow(this.n*1,this.n*0.5+2.35))*10)/10;//by a fortunate coincidence, this gives the 3rd, 4th and 5th buildings a CpS of 10, 69 and 420
-				this.baseCps=Math.ceil((Math.pow(this.n*1,this.n*0.5+2))*10)/10;//0.45 used to be 0.5
+				this.baseCps=Math.ceil((Math.pow(this.n*1,this.n*0.7+2))*10)/10;//0.45 used to be 0.5
 				//this.baseCps=Math.ceil((Math.pow(this.n*1,this.n*0.45+2.10))*10)/10;
 				//clamp 14,467,199 to 14,000,000 (there's probably a more elegant way to do that)
 				var digits=Math.pow(10,(Math.ceil(Math.log(Math.ceil(this.baseCps))/Math.LN10)))/100;
@@ -7693,10 +7693,10 @@ Game.Launch=function()
 				//this.basePrice=(this.n*2.5+7.5)*Math.pow(10,this.n);
 				var digits=Math.pow(10,(Math.ceil(Math.log(Math.ceil(this.basePrice))/Math.LN10)))/100;
 				this.basePrice=Math.round(this.basePrice/digits)*digits;
-				if (this.id>=16) this.basePrice*=10;
-				if (this.id>=17) this.basePrice*=10;
-				if (this.id>=18) this.basePrice*=10;
-				if (this.id>=19) this.basePrice*=10;
+				if (this.id>=16) this.basePrice*=7;
+				if (this.id>=17) this.basePrice*=8;
+				if (this.id>=18) this.basePrice*=9;
+				if (this.id>=19) this.basePrice*=5;
 				this.price=this.basePrice;
 				this.bulkPrice=this.price;
 			}
